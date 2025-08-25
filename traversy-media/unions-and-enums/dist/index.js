@@ -37,3 +37,28 @@ var Color;
 })(Color || (Color = {}));
 let shirtColor = Color.Red;
 console.log(shirtColor); // "RED"
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Objects 
+// You can explicitily declare the shape of an object
+// A variable named user. 
+// The type notation part ': { name: string; age: number };' means that user must be an object
+// with exactly these characteristics
+let user;
+user = { name: "Bob", age: 30 }; // assigning the object
+let user2 = { name: "Bob", age: 30 };
+let u1 = { name: "Alice" }; // no number, fine.
+let u2 = { name: "Ana", age: 20 };
+let u3 = { id: 1, name: "João" };
+u3.name = "TposeProgrammer";
+let colors = {
+    primary: "blue",
+    secondary: "green"
+};
+colors["accent"] = "red";
+console.log(colors); // { primary: "blue", secondary: "green", acent: "red" }
+let u = {
+    name: "Maria",
+    address: { city: "Recife", zip: "50000" }
+};
+console.log(Worker);
+let w = { name: "Ana", company: "OpenAI" };
