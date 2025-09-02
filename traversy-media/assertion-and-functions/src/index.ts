@@ -29,3 +29,42 @@ someValue = "Hello";
 
 // Compiler doesn't know it's a string here:
 let strLength: number = (someValue as string).length; // alternatively (<string>someValue).length;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Functions:
+
+// In TypeScript, you can declare what type of value each parameter should be:
+function greet(name: string) : string {
+    return `Hello, ${name}`;
+}
+console.log(greet("Tpose")); // Hello, Tpose
+// greet(42); // ERROR!
+
+// You can also specify (or let TS infer) the return type:
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+function logMessage(msg: string): void {
+    console.log(msg); // Note: even tho it returns nothing we can still use the return keyword 
+                      // as a flow controller
+}
+
+// JS lets you call functions with fewer arguments than parameters. TS makes you mark that explicity:
+function buildName(first: string, last?: string): string {
+    // so its sort of a optional param
+    return last ? `${first} ${last}` : `${first}`;
+}
+
+console.log(buildName("John"));         // ok logs just John
+console.log(buildName("John", "Wick")); // ok logs John Wick
+
+
+
+
+
+
+
+
+
+
