@@ -55,6 +55,18 @@ const sub: MathOperation = (x: number, y: number): number => x - y;
 console.log(add(2, 3)); // 5
 console.log(sub(2, 3)); // -1 
 
-// Stopped at: 5. Extending interfaces
+// 5. Extending interfaces: interfaces can extend other interfaces
+interface Animal {
+    name: string;
+}
+
+interface Dog extends Animal {
+    breed: string;
+}
+
+const myDog: Dog = {
+    name: 'Rex',
+    breed: 'Labrador',
+};
 
 
